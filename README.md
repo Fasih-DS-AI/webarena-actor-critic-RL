@@ -51,8 +51,7 @@ navigation, built on the ideas of the **WebArena** benchmark (Zhou et al., 2023)
 │   └── config.yaml             # hyperparameters & seed
 ├── results/                    # metrics, plots, trained checkpoints
 ├── WebArena_ActorCritic_Paper.pdf      # IEEE-style paper
-├── WebArena_ActorCritic_Report.pdf     # full report
-└── WebArena_ActorCritic_Slides.pptx    # presentation deck
+]
 ```
 
 ## 🚀 Quick start

@@ -1,0 +1,43 @@
+# MiniWebArena Actor-Critic — experiment configuration
+# All randomness is seeded from `seed` for reproducibility.
+
+seed: 42
+# device: the demonstrator's networks are tiny (128x128 MLPs) and the bottleneck
+# is sequential, single-step environment rollouts (batch size 1), which are
+# GPU-overhead-bound. CPU is therefore faster here; the GTX 1660S GPU is reserved
+# for the LLM-Actor production scale-up (section: Future Work). Set to "cuda" to
+# force the GPU, or "auto" to auto-detect.
+device: cpu           # auto | cpu | cuda
+
+env:
+  max_steps: 40             # hard cap on episode length
+  step_budget_factor: 3.0   # per-episode budget = factor * task.length
+  trap_prob: 0.35           # probability a dead-end "trap" element appears
+  n_distractors: 6          # distractor elements rendered per page
+
+network:
+  hidden_sizes: [128, 128]
+
+train:
+  total_env_steps: 600000   # total environment interactions per run
+  n_steps: 2048             # transitions collected per policy iteration (rollout)
+  eval_every_updates: 10    # evaluate (greedy) every N policy updates -> learning curve
+  eval_episodes: 120        # episodes per evaluation point
+
+# Shared optimisation / RL hyperparameters (proposal section 2).
+gamma: 0.99
+gae_lambda: 0.95
+actor_lr: 0.0003
+critic_lr: 0.001
+value_coef: 0.5
+entropy_coef: 0.005    # modest exploration bonus; low enough to let the policy sharpen
+max_grad_norm: 0.5
+normalize_adv: true
+
+ppo:
+  clip_eps: 0.2
+  epochs: 4                 # K optimisation epochs per rollout
+  minibatch_size: 256
+
+eval:
+  n_eval_episodes: 300      # final held-out evaluation episode count

@@ -1,0 +1,8 @@
+# Core dependencies for the MiniWebArena Actor-Critic demonstrator.
+# Install torch from the appropriate index for your platform, e.g.:
+#   CPU:   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   CUDA:  pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch>=2.2
+numpy>=1.24
+matplotlib>=3.7
+PyYAML>=6.0

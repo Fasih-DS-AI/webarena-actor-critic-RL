@@ -1,0 +1,92 @@
+{
+  "Random": {
+    "train": {
+      "success_rate": 0.006666666666666667,
+      "mean_return": -0.49740000000000006,
+      "mean_length": 15.74,
+      "mean_steps_success": 16.5,
+      "mean_progress": 0.3759126984126984,
+      "n_episodes": 300
+    },
+    "heldout": {
+      "success_rate": 0.05,
+      "mean_return": -0.2945666666666667,
+      "mean_length": 12.623333333333333,
+      "mean_steps_success": 10.666666666666666,
+      "mean_progress": 0.4176666666666667,
+      "n_episodes": 300
+    }
+  },
+  "Heuristic": {
+    "train": {
+      "success_rate": 0.16,
+      "mean_return": -0.2969333333333334,
+      "mean_length": 15.193333333333333,
+      "mean_steps_success": 12.083333333333334,
+      "mean_progress": 0.6026587301587302,
+      "n_episodes": 300
+    },
+    "heldout": {
+      "success_rate": 0.21666666666666667,
+      "mean_return": -0.14250000000000004,
+      "mean_length": 12.083333333333334,
+      "mean_steps_success": 9.984615384615385,
+      "mean_progress": 0.5686666666666668,
+      "n_episodes": 300
+    }
+  },
+  "Actor-only (no Critic)": {
+    "train": {
+      "success_rate": 0.22666666666666666,
+      "mean_return": 0.07419999999999999,
+      "mean_length": 15.08,
+      "mean_steps_success": 11.735294117647058,
+      "mean_progress": 0.6608015873015873,
+      "n_episodes": 300
+    },
+    "heldout": {
+      "success_rate": 0.2733333333333333,
+      "mean_return": 0.15319999999999998,
+      "mean_length": 12.013333333333334,
+      "mean_steps_success": 9.78048780487805,
+      "mean_progress": 0.6698333333333333,
+      "n_episodes": 300
+    }
+  },
+  "A2C Actor-Critic": {
+    "train": {
+      "success_rate": 0.31333333333333335,
+      "mean_return": 0.1579,
+      "mean_length": 15.043333333333333,
+      "mean_steps_success": 12.712765957446809,
+      "mean_progress": 0.7575793650793651,
+      "n_episodes": 300
+    },
+    "heldout": {
+      "success_rate": 0.39,
+      "mean_return": 0.26503333333333334,
+      "mean_length": 11.83,
+      "mean_steps_success": 9.692307692307692,
+      "mean_progress": 0.7666666666666666,
+      "n_episodes": 300
+    }
+  },
+  "PPO Actor-Critic": {
+    "train": {
+      "success_rate": 0.8133333333333334,
+      "mean_return": 0.6875999999999999,
+      "mean_length": 12.573333333333334,
+      "mean_steps_success": 11.573770491803279,
+      "mean_progress": 0.9475,
+      "n_episodes": 300
+    },
+    "heldout": {
+      "success_rate": 0.8266666666666667,
+      "mean_return": 0.7303333333333334,
+      "mean_length": 9.633333333333333,
+      "mean_steps_success": 8.858870967741936,
+      "mean_progress": 0.9436666666666668,
+      "n_episodes": 300
+    }
+  }
+}

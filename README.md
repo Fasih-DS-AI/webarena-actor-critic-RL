@@ -97,8 +97,7 @@ replacing the MLP Actor with a LoRA-fine-tuned LLM on the full Dockerized WebAre
 ## 📄 Documents
 
 - `WebArena_ActorCritic_Paper.pdf` — IEEE-style research paper
-- `WebArena_ActorCritic_Report.pdf` — full technical report
-- `WebArena_ActorCritic_Slides.pptx` — presentation deck
+
 
 ## 👥 Authors
 
